@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Future Achievers Study Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            transition: 0.4s;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50, #2e7d32);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #2e7d32;
+            transform: scale(1.05);
+        }
+
+        .counter {
+            font-size: 22px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 8px;
+            width: 220px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #2e7d32;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        .dark-mode {
+            background: #121212;
+            color: white;
+        }
+
+        .dark-mode header {
+            background: linear-gradient(135deg, #222, #111);
+        }
+
+        .toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: white;
+            color: black;
+            font-size: 14px;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="toggle" onclick="toggleDarkMode()">🌙 Dark Mode</div>
+
+<header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Logo">
+    <h1>Future Achievers Study Group</h1>
+    <p>Learn Together. Grow Together. Succeed Together.</p>
+</header>
+
+<section>
+    <h2>Why Join Us?</h2>
+    <p>
+        ✔ Daily Study Sessions <br>
+        ✔ Homework Help <br>
+        ✔ Exam Preparation <br>
+        ✔ Supportive Community
+    </p>
+
+    <div class="counter">
+        Members Joined: <span id="memberCount">0</span>
+    </div>
+
+    <h2>Register to Join</h2>
+
+    <form onsubmit="addMember(event)">
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <br><br>
+
+    <!-- Your Facebook Group Link Added Here -->
+    <a href="https://facebook.com/groups/1317093120256175/" class="btn" target="_blank">
+        Go to Study Group
+    </a>
+</section>
+
+<footer>
+    <p>Contact: yourname@email.com</p>
+    <p><strong>Website Created by Nassep Usman</strong></p>
+</footer>
+
+<script>
+    let count = 0;
+
+    function addMember(event) {
+        event.preventDefault();
+        count++;
+        document.getElementById("memberCount").innerText = count;
+        alert("Successfully Registered! 🎉");
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
+
+</body>
+</html>
+<footer>
+    <p>Contact: <a href="mailto:Enhancernas@gmail.com" style="color:white;">
+        Enhancernas@gmail.com
+    </a></p>
+    <p><strong>Website Created by Nassep Usman</strong></p>
+</footer>
